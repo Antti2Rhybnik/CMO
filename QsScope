@@ -1,0 +1,45 @@
+#ifndef QS_SCOPE_HPP
+#define QS_SCOPE_HPP
+
+#include <vector>
+#include <QDebug>
+#include <typeinfo>
+
+template <class QsObject>
+class QsScope {
+
+public:
+
+    std::vector<QsObject*> scope;
+
+
+    QsScope() { }
+
+    QsScope(int N) {
+
+        qDebug() << "ctor 'QsScope' has called with QsQbject = " << (char*)typeid(QsObject).name();
+        for (int i = 0; i < N; ++i) {
+
+            scope.push_back(new QsObject(i + 1));
+        }
+    }
+
+    template <class QsObjectSon>
+    void addInScope(std::vector<QsObjectSon*>& scope) {
+
+        for (auto& obj : scope) {
+
+            this->scope.push_back(obj);
+        }
+    }
+
+    typename std::vector<QsObject*>& getScope() {
+        return scope;
+    }
+
+
+};
+
+
+#endif // QS_SCOPE_HPP
+
