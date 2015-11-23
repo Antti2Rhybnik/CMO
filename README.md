@@ -4,12 +4,18 @@ possible types of event:
 Classes inheritance:
 
 QsEvent (describes the time and type of event)
+
 -> QsClient
+
 -> QsQueueCell
+
 -> QsServer
 
 QsScope (just aggregates a vector of...)
+
 -> QsClientScope (...vector of 'QsClient' class)
+
 -> QsQueueScope (...vector of 'QsQueueCell' class)
+
 -> QsServerScope (...vector of 'QsServer' class)
 
