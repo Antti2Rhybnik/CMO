@@ -1,21 +1,25 @@
-possible types of event: 
-  WAITING, CLIENT_IN, ON_QUEUE_FROM_CLIENT, ON_SERVER_FROM_QUEUE, SERVER_OUT;
+##Query System Simulator##
 
-Classes inheritance:
+This is Qt based application which simulates a query system.
 
-QsEvent (describes the time and type of event)
+possible event types: 
+* WAITING 
+* CLIENT_IN 
+* ON_QUEUE_FROM_CLIENT 
+* ON_SERVER_FROM_QUEUE 
+* SERVER_OUT
 
--> QsClient
+**Classes inheritance:**
 
--> QsQueueCell
+**QsEvent** (_describes the time and type of event_)
 
--> QsServer
+* QsClient
+* QsQueueCell
+* QsServer
 
-QsScope (just aggregates a vector of...)
+**QsScope** (_just aggregates a vector of..._)
 
--> QsClientScope (...vector of 'QsClient' class)
-
--> QsQueueScope (...vector of 'QsQueueCell' class)
-
--> QsServerScope (...vector of 'QsServer' class)
+* QsClientScope (...vector of 'QsClient' class)
+* QsQueueScope (...vector of 'QsQueueCell' class)
+* QsServerScope (...vector of 'QsServer' class)
 
