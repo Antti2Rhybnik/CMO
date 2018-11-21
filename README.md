@@ -1,4 +1,4 @@
-##Query System Simulator##
+## Query System Simulator
 
 This is Qt based application which simulates a query system.
 
